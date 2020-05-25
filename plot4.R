@@ -17,10 +17,10 @@ png("plot4.png", width=480, height=480)
 par(mfrow = c(2, 2)) 
 
 #Output plots to png
-plot(datetime, Global_active_power, type="l", xlab="", ylab="Global Active Power", cex=0.2)
-plot(datetime, Voltage, type="l", xlab="datetime", ylab="Voltage")
-plot(datetime, Sub_metering_1, type="l", ylab="Energy Submetering", xlab="")
-plot(datetime, Global_reactive_power, type="l", xlab="datetime", ylab="Global_reactive_power")
+plot(datetime, outdat$Global_active_power, type="l", xlab="", ylab="Global Active Power", cex=0.2)
+plot(datetime, outdat$Voltage, type="l", xlab="datetime", ylab="Voltage")
+plot(datetime, outdat$Sub_metering_1, type="l", ylab="Energy Submetering", xlab="")
+plot(datetime, outdat$Global_reactive_power, type="l", xlab="datetime", ylab="Global_reactive_power")
 
 #Add legend
 legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=, lwd=2.5, col=c("black", "red", "blue"), bty="o")
